@@ -1,0 +1,61 @@
+/* Allgemeine Formatierung */
+body {
+    background-image: url("porsche_911_gt3_2021_4k-3840x2160.jpg");
+    background-size: cover;
+    background-position: center center;
+    color: black; /* Textfarbe anpassen */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Textschatten hinzufügen */
+    padding-top: 5vh; /* vertikalen Abstand oben hinzufügen */
+    padding-bottom: 20vh;
+}
+
+
+/* Überschriften zentrieren und Schriftfarben ändern */
+h1 {
+    text-align: center;
+    color: white; /* Schriftfarbe für h1 auf Weiß ändern */
+}
+
+h2, h3 {
+    text-align: center;
+    color: black; /* Schriftfarbe für h2 und h3 auf Schwarz ändern */
+}
+
+
+/* Navigation horizontal anordnen */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+}
+
+section h2 {
+    text-align: left;
+}
+
+section h3 {
+    text-align: left;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+/* Abschnitte formatieren */
+section {
+    text-align: left;
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.7;  /* 70 % Deckkraft */  
+}
+
+/* Fußzeile formatieren */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}

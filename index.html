@@ -2,90 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="sidebar">
-        <header>
-            <h1>Hey, ich bin Merlin</h1>
-        </header>
-        <!-- Dummy-Inhalt für die Sidebar -->
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Logo_Merlin.png" alt="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Wirtschaftsinformatik-Student </p>
+            <h1>Hey, ich bin <span>Merlin</span><br>Tanner</h1>
+        </div>
     </div>
+</div>
+<!-- -----------about----------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Bild_Merlin.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">Über mich</h1>
+                <p>Mein Name ist Merlin Tanner und ich stehe im Schlussspurt in meinem Bachelor-Studium 
+                zum Wirtschaftsinformatiker an der Berufsfachhochschule BFH Bern. Ursprünglich komme ich aus der
+                Reisebranche und habe in einem kleinen Reisebüro meine 3-jährige Ausbildung gemacht und weitere 
+                4 Jahre Berufserfahrung gesammelt. Dieser Berufsweg hat mir einen tiefen Einblick in den 
+                Kundenkontakt und in die Reisewelt verschafft. </p>
 
-    <nav>
-        <ul>
-            <li><a href="#about">Über mich</a></li>
-            <li><a href="#projects">Meine Projekte</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-        </ul>
-    </nav>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('berufliche tätigkeiten')">Berufliche Tätigkeiten</p>
+                    <p class="tab-links" onclick="opentab('ausbildung')">Ausbildung</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programmieren</span><br>html/CSS/Javascript</li>
+                        <li><span>Datenanalyse</span><br>R Studio</li>
+                        <li><span>Datenanalyse</span><br>MySQL</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="berufliche tätigkeiten">
+                    <ul>
+                        <li><span>2015 - 2021</span><br>Sales Agent bei der Aaretal Reisen AG</li>
+                        <li><span>2020 - 2022</span><br>Kurierfahrer für Just Eat Takeaway in Bern
+                        </li>
+                        <li><span>Seit 2022</span><br>Sales Agent bei der Aaretal Reisen AG</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="ausbildung">
+                    <ul>
+                        <li><span>Seit 2021</span><br>Studium Bachelor of Science Wirtschaftsinformatik Bern</li>
+                        <li><span>2018 - 2019</span><br>Kaufmännische Berufsmatura</li>
+                        <li><span>2015 - 2018</span><br>Berufsschule, Ausbildung zum Kaufmann</li>
+                        <li><span>2014 - 2015</span><br>Französischschule DIDAC Genf und Au-Pair</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <main class="content"></main>
+<script>
 
-        <section id="about">
-            <h2>Über mich</h2>
-            <p>Mein Name ist Merlin Tanner und ich stehe im Schlussspurt in meinem Bachelor-Studium zum Wirtschaftsinformatiker an der Berufsfachhochschule BFH Bern. 
-                Ursprünglich komme ich aus der Reisebranche und habe in einem kleinen Reisebüro meine 3-jährige Ausbildung gemacht und weitere 4 Jahre Berufserfahrung 
-                gesammelt. Dieser Berufsweg hat mir einen tiefen Einblick in den Kundenkontakt und in die Reisewelt verschafft. Durch die turbulente Zeit in der 
-                Reisebranche und die stark veränderten Verhältnisse, entschied ich mich eine neue Richtung einzuschlagen und begann vor etwas mehr als zwei Jahren 
-                mein Bachelorstudium zum Wirtschaftsinformatiker. 
-                
-                Meine Interessen, die zunächst in der Reisebranche in der Geografie, Kulturen und Aviatik verwurzelt waren, haben sich im Laufe der Zeit auf die 
-                Technologien der Neuzeit, Digitalisierung und die wirtschaftlichen Verflechtungen ausgedehnt. Durch den Einblick in einige Programmiersprachen während 
-                des Studiums, konnte ich mich für einige davon begeistern. Ich setze mich stark mit der Statistik-Programmiersprache R als Hauptbestandteil einer 
-                meiner Vertiefungsrichtungen, Data-Driven Visualization for Decision-making auseinander und hoffe dabei vertiefende Kenntnisse zu erlangen. 
-                
-                <ul>
-                    <li>7-jährige Berufserfahrung im Reisebüro</li>
-                    <li>Student im 5. Semester zum Bachelor of Science als Wirtschaftsinformatiker an der BFH Bern</li>
-                    <li>Geografie, Aviatik, Technologien und Programmieren als Hauptinteressen/</li>
-                </ul>
-            <p>hallo</p>
-            <p>Bern</p>
-            <p>hallo</p>
-        </section>
-        
-        <section id="projects">
-            <h2>Diplome</h2>
-            <div class="project">
-                <h3>Projekt 1</h3>
-                <p>Beschreibung des ersten Projekts.</p>
-            </div>
-            <div class="project">
-                <h3>Projekt 2</h3>
-                <p>Beschreibung des zweiten Projekts.</p>
-            </div>
-        </section>
-    
-        <section id="Programmierfähigkeiten">
-            <h2>Programmierfähigkeiten</h2>
-            <div class="project">
-                <h3>Meine Programmierfähigkeiten</h3>
-                <p>Beschreibung</p>
-            </div>
-            <div class="project">
-                <h3>Projekte</h3>
-                <p>Beschreibung der Projekte.</p>
-            </div>
-        </section>
-        
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <p>Du kannst mich wie folgt kontaktieren:</p>
-            <address>
-                E-Mail: <a href="mailto:merlin.tanner@bfh.students.ch">merlin.tanner@bfh.students.ch</a><br>
-                Telefon: +49 123 456 789
-            </address>
-        </section>
-        
-        <footer>
-            &copy; 2023 Mein Portfolio. Alle Rechte vorbehalten.
-        </footer>
-        
-    </main>
+    var tablinks = document.getElementsByClassName("tab-links"); 
+    var tabcontents = document.getElementsByClassName("tab-contents"); 
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
 
 </body>
-</html>
+</html> 
