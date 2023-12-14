@@ -11,7 +11,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(Background_black.png);
+    background-image: url(Neues_Bild.jpg);
     background-size: cover; 
     background-position: center; 
 }
@@ -188,7 +188,7 @@ nav ul li a:hover::after {
     
 }
 
-/* --------contact-------- */
+/* --------Kontakt-------- */
 .contact-left{
     flex-basis: 35%;
 }
