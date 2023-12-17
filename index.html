@@ -13,14 +13,16 @@
     <div class="container">
         <nav>
             <img src="Logo_Merlin.png" alt="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Kontakt</a></li>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#diplome">Diplome</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
-        </nav>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav> 
         <div class="header-text">
             <p>Wirtschaftsinformatik-Student </p>
             <h1>Hey, ich bin <span>Merlin</span><br>Tanner</h1>
@@ -37,10 +39,13 @@
             <div class="about-col-2">
                 <h1 class="subtitle">Über mich</h1>
                 <p>Mein Name ist Merlin Tanner und ich stehe im Schlussspurt in meinem Bachelor-Studium 
-                zum Wirtschaftsinformatiker an der Berufsfachhochschule BFH Bern. Ursprünglich komme ich aus der
-                Reisebranche und habe in einem kleinen Reisebüro meine 3-jährige Ausbildung gemacht und weitere 
-                4 Jahre Berufserfahrung gesammelt. Dieser Berufsweg hat mir einen tiefen Einblick in den 
-                Kundenkontakt und in die Reisewelt verschafft. </p>
+                zum Wirtschaftsinformatiker an der Berufsfachhochschule BFH Bern. Meine berufliche Karriere startete ich 2015 im Reisebüro Aaretal Reisen AG in Belp. 
+                Meine 3-jährige Lehre zum Kaufmann, Fachrichtung Reisebüro habe ich in diesem Betrieb absolviert. Nachdem ich die Berufsmatura absolviert habe, 
+                arbeitete ich weitere 2 Jahre bei Aaretal Reisen. Seit jeher hatte ich eine grosse Leidenschaft fürs Reisen und für die Aviatik. In dieser Zeit im 
+                Reisebüro konnte ich tiefe Einblicke in den Kundenkontakt und in die Reisewelt gewinnen und mich beruflich stark weiterentwickeln. 2021 wollte ich
+                eine neue Berufsrichtung einschlagen und begann mein Bachelorstudium in Wirtschaftsinformatik. Dieser Studiengang bot mir einen guten, ersten Einblick 
+                in die Informatik-Welt und zeigte mir die Zusammenhänge zwischen Technologien und Wirtschaft. Ich konnte ein vertieftes Verständnis für das 
+                Projektmanagement und im Bereich Data Analytics gewinnen.</p>
 
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -123,20 +128,24 @@
                 <p><i class="fa-solid fa-phone"></i> +41 77 438 37 17</p>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/merlin.tanner.9"><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/merlintm_/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/merlin-tanner-502399269/"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
                 <a href="Lebenslauf_Merlin Tanner_2023.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
                 <form>
-                    <input type="text" name="Name" placeholder="Dein Name" required>
-                    <input type="email" name="email" placeholder="Deine Email" required>
-                    <textarea name="Message" rows="6" placeholder="Deine Nachricht"></textarea>
+                    <input type="text" name="Name" placeholder="Ihr Name" required>
+                    <input type="email" name="email" placeholder="Ihre Email" required>
+                    <textarea name="Message" rows="6" placeholder="Ihre Nachricht"></textarea>
                     <button type="submit" class="btn btn2">abschicken</button>
                 </form>
             </div>
+        </div>
     </div>
+     <div class="Copyright">
+        <p>Copyright © Merlin Tanner</p>
+     </div>
 </div>
 
 <script>
@@ -157,5 +166,18 @@
 
 </script>
 
-</body>
+<script>
+
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+</body> 
 </html> 
