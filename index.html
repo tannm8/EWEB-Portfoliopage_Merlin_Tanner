@@ -17,7 +17,6 @@
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#diplome">Diplome</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Kontakt</a></li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
@@ -82,38 +81,22 @@
 <!-- -----Diplome----- ---> 
 <div id="diplome">
     <div class="container">
-        <h1 class="subtitle">Abschlüsse</h1> 
+        <h1 class="subtitle">Diplome</h1> 
         <div class="diplome-list">
-            <div>
-                <i class="fa-solid fa-user-graduate"></i>
-                <h2>EFZ Kaufmann Reisebüro</h2>
-                <a href="#">mehr</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-user-graduate"></i>
-                <h2>Kaufmännische Berufsmatura </h2>
-                <a href="#">mehr</a>
-            </div>
             <div>
                 <i class="fa-solid fa-language"></i>
                 <h2>Diplôme de Français Professionnel (DFP), B2 </h2>
-                <a href="#">mehr</a>
+                <a href="DFP_B2.pdf" target="_blank">mehr</a>
             </div>
             <div>
                 <i class="fa-solid fa-language"></i>
                 <h2>Business Vantage (BEC), B2 </h2>
-                <a href="#">mehr</a>
+                <a href="Cambridge_Business-Vantage.pdf" target="_blank">mehr</a>
             </div>
-        </div>
-    </div>
-</div>
-<!-- -----Portfolio----- -->
-<div id="portfolio">
-    <div id="container">
-        <h1 class="subtitle">Reisebüroerfahrung </h1> 
-        <div class="work-list">
-            <div class="work">
-                <img src="" alt="">
+            <div>
+                <i class="fa-solid fa-language"></i>
+                <h2>Amadeus Certificate</h2>
+                <a href="Amadeus_Certificate.pdf" target="_blank">mehr</a>
             </div>
         </div>
     </div>
@@ -124,7 +107,7 @@
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Kontakt</h1>
-                <p><i class="fa-solid fa-paper-plane"></i> merlin.tanner@students.bfh.ch</p>
+                <p><i class="fa-solid fa-paper-plane"></i> merlintanner99@gmail.com</p>
                 <p><i class="fa-solid fa-phone"></i> +41 77 438 37 17</p>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/merlin.tanner.9"><i class="fa-brands fa-facebook"></i></a>
@@ -134,17 +117,18 @@
                 <a href="Lebenslauf_Merlin Tanner_2023.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <form>
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Ihr Name" required>
-                    <input type="email" name="email" placeholder="Ihre Email" required>
+                    <input type="email" name="Email" placeholder="Ihre Email" required>
                     <textarea name="Message" rows="6" placeholder="Ihre Nachricht"></textarea>
                     <button type="submit" class="btn btn2">abschicken</button>
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
      <div class="Copyright">
-        <p>Copyright © Merlin Tanner</p>
+        <p>© 2023 Merlin Tanner</p>
      </div>
 </div>
 
@@ -178,6 +162,23 @@
     }
 
 </script>
-
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxV2bYJ4tfGsfHqsXzSUczSMmpKG17cX1LtM9HX4G-2KPXOItkRTEXEIfazMFrhUeGdlg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Nachricht erfolgreich gesendet"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body> 
 </html> 
