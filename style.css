@@ -268,7 +268,9 @@ nav .fa-solid{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(Neues_Bild_ohne-Hintergrund.png);
+        background-image: url(Merlin_Hintergrundbild.png);
+        background-size: cover;
+
     }
     .header-text{
         margin-top: 100%;
