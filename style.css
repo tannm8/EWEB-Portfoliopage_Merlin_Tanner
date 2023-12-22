@@ -48,7 +48,7 @@ nav ul li a{
 nav ul li a {
     position: relative;
     text-decoration: none;
-    color: #ffffff; /* Farbe des Texts anpassen */
+    color: #ffffff; 
 }
 
 nav ul li a::after {
@@ -59,13 +59,13 @@ nav ul li a::after {
     position: absolute;
     left: 0;
     bottom: -6px;
-    visibility: hidden; /* Linie standardmäßig verstecken */
-    transition: visibility 0s linear 0.3s; /* Verzögerung für den Übergang hinzufügen */
+    visibility: hidden; 
+    transition: visibility 0s linear 0.3s; 
 }
 
 nav ul li a:hover::after {
-    visibility: visible; /* Linie beim Hovern anzeigen */
-    transition: none; /* Übergang bei Hover aufheben */
+    visibility: visible; 
+    transition: none; 
 }
 .header-text{
     margin-top: 20%;
@@ -225,11 +225,11 @@ nav ul li a:hover::after {
 .btn.btn2 {
     display: inline-block;
     background: #307ebe;
-    padding: 10px 20px; /* Anpassung des Innenabstands */
-    border: none; /* Entfernen der Standard-Rand- und Rahmen-Eigenschaften */
-    color: white; /* Textfarbe für bessere Sichtbarkeit festlegen */
-    text-decoration: none; /* Unterstreichung entfernen, falls vorhanden */
-    border-radius: 5px; /* Ecken abrunden */
+    padding: 10px 20px; 
+    border: none; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 5px; 
     font-size: 12px;
 }
 .contact-right form{
